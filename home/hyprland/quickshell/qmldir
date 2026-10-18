@@ -1,0 +1,5 @@
+singleton Theme 1.0 Theme.qml
+singleton Hypr 1.0 Hypr.qml
+singleton Notifications 1.0 services/Notifications.qml
+singleton Audio 1.0 services/Audio.qml
+singleton Power 1.0 services/Power.qml

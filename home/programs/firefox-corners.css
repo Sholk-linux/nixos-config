@@ -1,0 +1,14 @@
+/* firefox-corners.css */
+:root {
+	/* Закругление вкладок */
+	--tab-border-radius: 4px !important;
+
+	/* Закругление кнопок на панели инструментов */
+	--toolbarbutton-border-radius: 4px !important;
+
+	/* Основное закругление для средних элементов (адресная строка, панели) */
+	--border-radius-medium: 4px !important;
+
+	/* Закругление кнопок в целом */
+	--button-border-radius: 4px !important;
+}
