@@ -50,7 +50,7 @@
                                                       --------------------------
                                                       ---- ГОРЯЧИЕ КЛАВИШИ ----
                                                       --------------------------
-                                                      local mainMod = "ALT"
+                                                      local mainMod = "SUPER"
 
                                                       -- Управление программами и окнами
                                                       hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
@@ -128,7 +128,7 @@
                                                     
                                                     	  -- Запуск менеджера обоев и установка картинки в одну строку
                                                     	  -- Это решает проблему, когда 'awww img' падает из-за еще не загруженного демона
-                                                    	  hl.exec_cmd("awww-daemon && sleep 2 && awww img '/home/sholk/.nix/home/hyprland/wallpaper.png'")
+                                                    	  hl.exec_cmd("awww-daemon & sleep 2 && awww img '/home/sholk/.nix/home/hyprland/wallpaper.png'")
                                                 	  end)
     '';
   };
