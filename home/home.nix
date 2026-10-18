@@ -15,8 +15,8 @@
     ./programs/mako.nix
     ./programs/yazi.nix
     ./programs/fastfetch/fastfetch.nix
-    ./services/discord-fetch.nix
-    ./services/discord.nix
+#    ./services/discord-fetch.nix
+#    ./services/discord.nix
   ];
 
   home.stateVersion = "26.05";

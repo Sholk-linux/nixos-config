@@ -79,8 +79,8 @@
     hunspellDicts.ru_RU
 
     # ─── Общение ────────────────────────────────────────────
-    discord
-    (pkgs.callPackage ./pkgs/discord-fetch.nix { })
+#    discord
+#    (pkgs.callPackage ./pkgs/discord-fetch.nix { })
 
     # ─── Шрифты ─────────────────────────────────────────────
     inter

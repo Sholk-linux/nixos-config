@@ -58,5 +58,14 @@
           hmModule
         ];
       };
+      nixosConfigurations.zenbook = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit rust-overlay; };
+        modules = [
+          ./hosts/zenbook
+          home-manager.nixosModules.home-manager
+          hmModule
+        ];
+      };
     };
 }
