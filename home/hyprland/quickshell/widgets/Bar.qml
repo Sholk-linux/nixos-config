@@ -5,10 +5,18 @@ import ".."
 
 PanelWindow {
     id: root
-    anchors { top: true; left: true; right: true }
-    margins { top: 8; left: 8; right: 8 }
+    anchors {
+        top: true
+        left: true
+        right: true
+    }
+    margins {
+        top: 8
+        left: 8
+        right: 8
+    }
     implicitHeight: 44
-	color: "transparent"
+    color: "transparent"
     Rectangle {
         anchors.fill: parent
         color: Theme.bg
@@ -41,16 +49,17 @@ PanelWindow {
             anchors.verticalCenter: parent.verticalCenter
             spacing: 16
 
-			KeyboardLayout {}
-			Separator {}
-			AudioMixer {}
-			NotificationCenter {}
-			Separator {}
+            KeyboardLayout {}
+            Separator {}
+            AudioMixer {}
+            NotificationCenter {}
+            Separator {}
+            Battery {}
             CpuUsage {}
             MemoryUsage {}
-			NetworkStatus {}
-			Separator {}
-			PowerMenu {}
+            NetworkStatus {}
+            Separator {}
+            PowerMenu {}
         }
     }
 }
