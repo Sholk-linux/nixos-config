@@ -64,35 +64,4 @@
       Environment = "PATH=/run/current-system/sw/bin:/usr/bin:/bin";
     };
   };
-
-  #offload
-  xdg.desktopEntries = {
-    prismlauncher = {
-      name = "Prism Launcher (NVIDIA)";
-      exec = "nvidia-offload prismlauncher";
-      icon = "prismlauncher";
-      terminal = false;
-      categories = [ "Game" ];
-    };
-
-    steam = {
-      name = "Steam (NVIDIA)";
-      exec = "nvidia-offload steam";
-      icon = "steam";
-      terminal = false;
-      categories = [ "Game" ];
-    };
-
-    discord = {
-      name = "Discord (NVIDIA)";
-      # Добавляем флаг для принудительного XWayland
-      exec = "nvidia-offload discord --ozone-platform-hint=x11";
-      icon = "discord";
-      terminal = false;
-      categories = [
-        "Network"
-        "InstantMessaging"
-      ];
-    };
-  };
 }

@@ -15,8 +15,8 @@
     ./programs/mako.nix
     ./programs/yazi.nix
     ./programs/fastfetch/fastfetch.nix
-#    ./services/discord-fetch.nix
-#    ./services/discord.nix
+    #    ./services/discord-fetch.nix
+    #    ./services/discord.nix
   ];
 
   home.stateVersion = "26.05";
@@ -57,4 +57,32 @@
   home.sessionPath = [
     "$HOME/.cargo/bin"
   ];
+  xdg.desktopEntries = {
+    prismlauncher = {
+      name = "Prism Launcher (NVIDIA)";
+      exec = "nvidia-offload prismlauncher";
+      icon = "prismlauncher";
+      terminal = false;
+      categories = [ "Game" ];
+    };
+
+    steam = {
+      name = "Steam (NVIDIA)";
+      exec = "nvidia-offload steam";
+      icon = "steam";
+      terminal = false;
+      categories = [ "Game" ];
+    };
+
+    discord = {
+      name = "Discord (NVIDIA)";
+      exec = "nvidia-offload discord --ozone-platform-hint=x11";
+      icon = "discord";
+      terminal = false;
+      categories = [
+        "Network"
+        "InstantMessaging"
+      ];
+    };
+  };
 }
