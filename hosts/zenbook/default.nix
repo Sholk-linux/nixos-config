@@ -1,4 +1,11 @@
-{ config, pkgs, lib, rust-overlay, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  rust-overlay,
+  ...
+}:
+{
   imports = [
     ../../modules/common.nix
     ../../modules/users.nix
@@ -41,4 +48,20 @@
   };
 
   powerManagement.enable = true;
+
+  systemd.services.zapret = {
+    description = "Zapret for Discord and YouTube";
+    after = [ "network.target" ];
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      Type = "simple";
+      WorkingDirectory = "/opt/zapret";
+      ExecStart = "/run/current-system/sw/bin/bash /opt/zapret/service.sh daemon";
+      ExecStop = "/run/current-system/sw/bin/bash /opt/zapret/service.sh kill";
+      Restart = "on-failure";
+      RestartSec = 10;
+      User = "root";
+      Environment = "PATH=/run/current-system/sw/bin:/usr/bin:/bin";
+    };
+  };
 }
