@@ -15,9 +15,20 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sysprint = {
+      url = "github:MBKCHEL/SysPrint";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, flatpaks, nixvim, rust-overlay, ... }:
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      flatpaks,
+      nixvim,
+      rust-overlay,
+      ...
+    }:
     let
       system = "x86_64-linux";
 
@@ -38,7 +49,8 @@
           ];
         };
       };
-    in {
+    in
+    {
       nixosConfigurations.sholk-space = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit rust-overlay; };

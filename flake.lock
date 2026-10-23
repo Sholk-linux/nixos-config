@@ -90,6 +90,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1791260994,
+        "narHash": "sha256-Miqqk/ammqnTUxaoCyvtwoPeLbI1ksFyLxi/CazZpWY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "151fa4e8ddfdd8dd25d945ad94ed54a13de9f6e4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixvim": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -116,7 +132,8 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "rust-overlay": "rust-overlay"
+        "rust-overlay": "rust-overlay",
+        "sysprint": "sysprint"
       }
     },
     "rust-overlay": {
@@ -136,6 +153,24 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "sysprint": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1792421167,
+        "narHash": "sha256-hl2xtKGkqeqQjCFOaILp8os7812nLDLl8ObBNSO0VMc=",
+        "owner": "MBKCHEL",
+        "repo": "SysPrint",
+        "rev": "783fdcdf10e0dbee84f7af0301ca641f37c63019",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MBKCHEL",
+        "repo": "SysPrint",
         "type": "github"
       }
     },

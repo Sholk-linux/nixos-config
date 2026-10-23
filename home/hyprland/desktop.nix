@@ -18,12 +18,12 @@
                                                         decoration = {
                                                           rounding = 10,
 
-                                          				active_opacity = 0.95,      -- Прозрачность активного окна (85%)
-                                                    		inactive_opacity = 0.9,    -- Прозрачность окон на заднем плане (75%)
+                                          				active_opacity = 1.0,      -- Прозрачность активного окна (85%)
+                                                    		inactive_opacity = 1.0,    -- Прозрачность окон на заднем плане (75%)
                                                     		fullscreen_opacity = 1.0,
 
                                                           blur = {
-                                                            enabled = true,
+                                                            enabled = false,
                                                       	  size = 8,                 -- Радиус размытия (чем больше, тем сильнее размытие)
                                                       	  passes = 3,               -- Количество проходов (3 дает идеальный мягкий эффект)
                                                       	  new_optimizations = true, -- Оптимизация производительности
