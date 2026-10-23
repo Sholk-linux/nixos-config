@@ -27,6 +27,7 @@
       flatpaks,
       nixvim,
       rust-overlay,
+      sysprint,
       ...
     }:
     let
@@ -42,7 +43,7 @@
           useGlobalPkgs = true;
           useUserPackages = true;
           users.sholk = import ./home/home.nix;
-          extraSpecialArgs = { inherit nixvim flatpaks; };
+          extraSpecialArgs = { inherit nixvim flatpaks sysprint; };
           sharedModules = [
             flatpaks.homeModules.default
             nixvim.homeModules.nixvim

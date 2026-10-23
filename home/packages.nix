@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, sysprint, ... }:
 
 {
   home.packages = with pkgs; [
@@ -32,6 +32,7 @@
     zsh-powerlevel10k
     bat
     fastfetch
+    sysprint
     lavat
     pipes-rs
     peaclock
